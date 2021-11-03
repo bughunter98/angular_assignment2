@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+    <ng-container *ngFor="let items of productList">
+      <div class="card col-md-3">
+        <img class="product-image" (click)="onSelect(items)"routerLink="/product-description" src="{{ items.image }}" />
+        <h5>{{items.title}} </h5>
+        <p class="item-description">{{ items.description }}</p>
+        <p class="currency"><strong>Price:</strong>${{items.price}}</p>
+        <img
+          class="logo"
+          src="../../assets/images/flipkart-assured.jpg"
+          alt=""
+        />
+        <!-- <button class="btn btn-primary"(click)="addToCart(items)">Display</button> -->
+        <button class="btn btn-primary"(click)="addToCart(items)">Add to Cart</button>
+      </div>
+    </ng-container>
+    </div>
+  
+</div>
+

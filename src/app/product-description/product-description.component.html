@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <ng-container *ngFor="let items of productDescription">
+      <div class="col col-md-2">
+        <!-- <p>{{items.id}}</p>
+        <img src="" alt="" class="product-image" src="{{ items.image }}" />  -->
+        <table>
+          <tbody>
+            <td>{{ items.id }}</td>
+            <td>{{ items.title }}</td>
+            <td>
+              <img class="product-image" src="{{ items.image }}" alt="" />
+            </td>
+            <td>{{ items.description }}</td>
+            <td>{{ items.price }}</td>
+          </tbody>
+        </table>
+      </div>
+    </ng-container>
+  </div>
+</div>

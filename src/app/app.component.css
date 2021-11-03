@@ -1,0 +1,14 @@
+.logo{
+    height: 30px;
+    width: auto;
+    margin-right: 50px;
+}
+.cart-logo{
+    height: 30px;
+    margin-right: 30px;
+}
+.badge{
+    display: flex;
+    float: right;
+    margin: -10px 60px 0px -20px;
+}
