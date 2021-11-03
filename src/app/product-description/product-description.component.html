@@ -1,21 +1,47 @@
-<div class="container">
-  <div class="row">
-    <ng-container *ngFor="let items of productDescription">
-      <div class="col col-md-2">
-        <!-- <p>{{items.id}}</p>
-        <img src="" alt="" class="product-image" src="{{ items.image }}" />  -->
-        <table>
+<ng-container *ngIf="productDescription">
+  <div class="container">
+    <div class="card-table">
+      <div class="cart-product">
+        <table class="table table-responsive">
+          <thead>
+            <tr>
+              <th>Product Name</th>
+              <th>Product Image</th>
+              <th>Description</th>
+              <th>Price</th>
+              <th>Quantity</th>
+            </tr>
+          </thead>
           <tbody>
-            <td>{{ items.id }}</td>
-            <td>{{ items.title }}</td>
-            <td>
-              <img class="product-image" src="{{ items.image }}" alt="" />
-            </td>
-            <td>{{ items.description }}</td>
-            <td>{{ items.price }}</td>
+            <tr>
+              <td>{{ productDescription.title }}</td>
+              <td>
+                <img style="width: 120px" [src]="productDescription.image" alt="" />
+              </td>
+              <td style="width: 25%">{{ productDescription.description }}</td>
+              <th style="width: 12%">{{ productDescription.price }}</th>
+              <td style="width: 12%">{{ productDescription.quantity }}</td>
+              <td style="width: 12%">{{ productDescription.total }}</td>
+            </tr>
+            <tr>
+              <td colspan="2"></td>
+              <td>
+                <button routerLink="/product-list" class="btn btn-primary">
+                  Shop More
+                </button>
+              </td>
+              <td>
+                <button
+                  class="btn btn-primary"
+                  (click)="addtoCart(productDescription)"
+                >
+                  Add to cart
+                </button>
+              </td>
+            </tr>
           </tbody>
         </table>
       </div>
-    </ng-container>
+    </div>
   </div>
-</div>
+</ng-container>

@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { myRoutes } from './app-routing.module';
 import {HttpClientModule} from '@angular/common/http';
 import { CartComponent } from './cart/cart.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 //import { CartComponent } from './cart/cart.component';
 //import { ProductDescriptionComponent } from './product-description/product-description.component';
 
@@ -14,9 +13,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
   declarations: [
     AppComponent,
     myRoutes,
-    PageNotFoundComponent,
-    //CartComponent
-    //ProductDescriptionComponent 
+    
   ],
   imports: [
     BrowserModule,

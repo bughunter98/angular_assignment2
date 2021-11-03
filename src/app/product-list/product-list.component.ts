@@ -9,7 +9,7 @@ import { CartService } from '../service/cart.service';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit {
-  public productList : any;
+  public productList:any;
 
   constructor(private api : Services,private cartService:CartService,private _router:Router) { }
 
@@ -32,6 +32,8 @@ export class ProductListComponent implements OnInit {
       this._router.navigate(['/product-list',items.id]); 
   }
 
+  viewList(item:any){
+    this._router.navigateByUrl('/product-description', { state: item });
   }
-
-
+  }
+  
