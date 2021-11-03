@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { myRoutes } from './app-routing.module';
 import {HttpClientModule} from '@angular/common/http';
 import { CartComponent } from './cart/cart.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 //import { CartComponent } from './cart/cart.component';
 //import { ProductDescriptionComponent } from './product-description/product-description.component';
 
@@ -13,6 +14,7 @@ import { CartComponent } from './cart/cart.component';
   declarations: [
     AppComponent,
     myRoutes,
+    CheckoutComponent,
     
   ],
   imports: [

@@ -1,47 +1,22 @@
 <ng-container *ngIf="productDescription">
+  <img class="product-image" [src]="productDescription.image" alt="" />
   <div class="container">
-    <div class="card-table">
-      <div class="cart-product">
-        <table class="table table-responsive">
-          <thead>
-            <tr>
-              <th>Product Name</th>
-              <th>Product Image</th>
-              <th>Description</th>
-              <th>Price</th>
-              <th>Quantity</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>{{ productDescription.title }}</td>
-              <td>
-                <img style="width: 120px" [src]="productDescription.image" alt="" />
-              </td>
-              <td style="width: 25%">{{ productDescription.description }}</td>
-              <th style="width: 12%">{{ productDescription.price }}</th>
-              <td style="width: 12%">{{ productDescription.quantity }}</td>
-              <td style="width: 12%">{{ productDescription.total }}</td>
-            </tr>
-            <tr>
-              <td colspan="2"></td>
-              <td>
-                <button routerLink="/product-list" class="btn btn-primary">
-                  Shop More
-                </button>
-              </td>
-              <td>
-                <button
-                  class="btn btn-primary"
-                  (click)="addtoCart(productDescription)"
-                >
-                  Add to cart
-                </button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+    <div class="text">
+      <h2>{{ productDescription.title }}</h2>
+      <p class="description">{{ productDescription.description }}</p>
+      <p class="price">Price :<strong>${{ productDescription.price }}</strong> </p>
+    </div>
+    <div class="btn">
+      <button routerLink="/product-list" class="btn btn-success">
+        Shop More
+      </button>
+
+      <button class="btn btn-primary" (click)="addtoCart(productDescription)">
+        Add to cart
+      </button>
+      <button class="btn btn-primary" routerLink="/cart-page">
+       View Cart
+      </button>
     </div>
   </div>
 </ng-container>
